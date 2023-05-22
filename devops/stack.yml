@@ -4,13 +4,13 @@ services:
   backend:
     image: grupo1backend:1
     ports:
-      - target: 8080
-        published: 8080
+      - target: 8081
+        published: 8081
         protocol: tcp
         mode: host
     networks:
-      - desarrollo_net
-  db:
+      - grupo1back_net
+  db1:
     image: postgres:15.0-bullseye
     environment:
       - TZ=America/Guayaquil
@@ -19,16 +19,16 @@ services:
       - POSTGRES_USER=postgres
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - pg_tendencia_data:/var/lib/postgresql/data/pgdata
+      - pg_grupo1vol_data:/var/lib/postgresql/data/pgdata
     networks:
-      - desarrollo_net
+      - grupo1back_net
            
 volumes:
-  pg_tendencia_data:
+  pg_grupo1vol_data:
     external: true
 
 networks:
-  desarrollo_net:
+  grupo1back_net:
     external: true
 
 secrets:
