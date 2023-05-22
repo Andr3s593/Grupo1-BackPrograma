@@ -7,9 +7,7 @@ package com.example.Grupo1Backend.Programa;
      public interface ProgramaRepository extends CrudRepository<Programa, Long> {
      
          List<Programa> findAll();
-     
-     
-     
+              
      }
 
  

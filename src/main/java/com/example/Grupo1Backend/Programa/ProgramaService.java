@@ -1,38 +1,34 @@
 package com.example.Grupo1Backend.Programa;
-
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class ProgramaService {
-    //atributo delimitador de acceso,tipo de dato,nombre del atributo
+
+    //Atributos: Delimitador de Acceso, Tipo de Dato, Nombre del Atributo
     @Autowired
     private ProgramaRepository programaRepository;
 
     //Crud
-    //crear
-    //metod delimitador de acceso,tipo de dato que retorna,nombre del metodo/funcion
-    public Programa save( Programa entity){
+
+    //Crear
+    //Method: Delimitador de acceso, Tipo de dato que retorna, nombre metodo/ funcion
+    public Programa save(Programa entity)
+    {
         return programaRepository.save(entity);
     }
-
-    //read
-    public Programa findById(long id){
+    //Read
+    public List<Programa> findAll()
+    {
+        return programaRepository.findAll();
+    }
+    public Programa findById(long id)
+    {
         return programaRepository.findById(id).orElse(null);
     }
-    //put
-
-    //delete
-    public void delete(Programa entity){
-        programaRepository.delete(entity);
+    public void deleteById(long id)
+    {
+        programaRepository.deleteById(id);
     }
-    //traer todo
-
-    public List findAll(){
-        return (List) programaRepository.findAll();
-    }
-
-
 }
