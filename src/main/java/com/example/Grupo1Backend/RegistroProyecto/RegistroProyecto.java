@@ -1,4 +1,4 @@
-package com.example.Grupo1Backend.lineaInvestigacion;
+package com.example.Grupo1Backend.RegistroProyecto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,12 +8,14 @@ import lombok.Data;
 
 @Data
 @Entity
-public class LineaInvestigacion {
-
-        //Atributos: Delimitador de acceso, Tipo de dato, Nombre del atrbuto
+public class RegistroProyecto {
+    //Atributos: Delimitador de Acceso, Tipo de Dato, Nombre del Atributo    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String codigo;
     private String nombre;
-}
+    private String apellido;
+    private String carrera;
+    private String email;
+    private Integer cedula;
+    }

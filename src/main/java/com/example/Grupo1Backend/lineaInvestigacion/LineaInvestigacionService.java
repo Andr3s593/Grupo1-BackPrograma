@@ -1,4 +1,4 @@
-package proyectosInvestigacion.proyectosInvestigacion.core.lineaInvestigacion;
+package com.example.Grupo1Backend.lineaInvestigacion;
 
 import java.util.List;
 
