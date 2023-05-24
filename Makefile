@@ -6,4 +6,11 @@ deploy:
 	@ docker stack deploy --with-registry-auth -c devops/stack.yml grupo1
 rm:
 	@ docker stack rm grupo1
+service:
+	@ docker service ls
+containers:
+	@ docker ps
+info-volume:
+	@ docker volume ls
+
 	
